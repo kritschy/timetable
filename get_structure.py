@@ -3,7 +3,7 @@ import json
 
 
 
-content = pq(url='http://stupla.osw-online.de')
+content = pq(url='')
 content = content('body').find('center').find('table')
 klasse = content("tr > td").text().split(" ")
 
@@ -29,7 +29,7 @@ print(json.dumps(result))
 
 def getUrl(klasse):
 
-    url = 'http://stupla.osw-online.de/Kla1_{}.htm'.format(klasse)
+    url = '{}'.format(klasse) 
     return url
 
 
